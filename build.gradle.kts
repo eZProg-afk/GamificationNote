@@ -1,9 +1,19 @@
-plugins {
-    id("com.android.application") version("7.2.1") apply(false)
-    id("com.android.library") version("7.2.1") apply(false)
-    id("org.jetbrains.kotlin.android") version("1.6.10") apply(false)
+buildscript {
+
+    repositories {
+        google()
+        mavenCentral()
+        maven { setUrl(Android.Repositories.kotlinx) }
+        maven { setUrl(Android.Repositories.jitpack) }
+    }
+
+    dependencies {
+        classpath(Android.Classpaths.gradle)
+        classpath(Android.Classpaths.kotlin)
+        classpath(Android.Classpaths.navigation)
+    }
 }
 
-tasks.register("clean", Delete::class){
-    delete(rootProject.buildDir)
+tasks.register("clean", Delete::class) {
+    rootProject.buildDir
 }
