@@ -1,16 +1,20 @@
 pluginManagement {
     repositories {
+        maven { setUrl("https://kotlin.bintray.com/kotlinx") }
         gradlePluginPortal()
         google()
         mavenCentral()
     }
 }
+
 dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         google()
+        gradlePluginPortal()
         mavenCentral()
+        maven { setUrl("https://jitpack.io") }
     }
 }
+
 rootProject.name = "GamificationNote"
-include ':app'
+include(":app")
