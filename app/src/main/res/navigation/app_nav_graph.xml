@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_nav_graph"
+    app:startDestination="@id/dashboardFragment">
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="spiral.bit.dev.gamificationnote.ui.features.dashboard.DashboardFragment"
+        android:label="fragment_dashboard"
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/toAchievements"
+            app:destination="@id/achievementsFragment" />
+        <action
+            android:id="@+id/toAchievementsConstructor"
+            app:destination="@id/achievementsConstructorFragment" />
+        <action
+            android:id="@+id/toAppDecoration"
+            app:destination="@id/appDecorationFragment" />
+        <action
+            android:id="@+id/toCreatorHome"
+            app:destination="@id/creatorHomeFragment" />
+        <action
+            android:id="@+id/toRaids"
+            app:destination="@id/raidsFragment" />
+        <action
+            android:id="@+id/toSettings"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tasksFragment"
+        android:name="spiral.bit.dev.gamificationnote.ui.features.tasks.TasksFragment"
+        android:label="fragment_tasks"
+        tools:layout="@layout/fragment_tasks" />
+    <fragment
+        android:id="@+id/shopFragment"
+        android:name="spiral.bit.dev.gamificationnote.ui.features.shop.ShopFragment"
+        android:label="fragment_shop"
+        tools:layout="@layout/fragment_shop" />
+    <fragment
+        android:id="@+id/achievementsFragment"
+        android:name="spiral.bit.dev.gamificationnote.ui.features.dashboard.achievements.AchievementsFragment"
+        android:label="fragment_achievements"
+        tools:layout="@layout/fragment_achievements" />
+    <fragment
+        android:id="@+id/achievementsConstructorFragment"
+        android:name="spiral.bit.dev.gamificationnote.ui.features.dashboard.achievementsConstructor.AchievementsConstructorFragment"
+        android:label="fragment_achievements_constructor"
+        tools:layout="@layout/fragment_achievements_constructor" />
+    <fragment
+        android:id="@+id/appDecorationFragment"
+        android:name="spiral.bit.dev.gamificationnote.ui.features.dashboard.appDecoration.AppDecorationFragment"
+        android:label="fragment_app_decoration"
+        tools:layout="@layout/fragment_app_decoration" />
+    <fragment
+        android:id="@+id/creatorHomeFragment"
+        android:name="spiral.bit.dev.gamificationnote.ui.features.dashboard.creatorHome.CreatorHomeFragment"
+        android:label="fragment_creator_home"
+        tools:layout="@layout/fragment_creator_home" />
+    <fragment
+        android:id="@+id/guildBossFragment"
+        android:name="spiral.bit.dev.gamificationnote.ui.features.dashboard.guild.boss.GuildBossFragment"
+        android:label="fragment_guild_boss"
+        tools:layout="@layout/fragment_guild_boss" />
+    <fragment
+        android:id="@+id/createGuildFragment"
+        android:name="spiral.bit.dev.gamificationnote.ui.features.dashboard.guild.create.CreateGuildFragment"
+        android:label="fragment_create_guild"
+        tools:layout="@layout/fragment_create_guild" />
+    <fragment
+        android:id="@+id/guildChatFragment"
+        android:name="spiral.bit.dev.gamificationnote.ui.features.dashboard.guild.chat.GuildChatFragment"
+        android:label="fragment_guild_chat"
+        tools:layout="@layout/fragment_guild_chat" />
+    <fragment
+        android:id="@+id/guildInfoFragment"
+        android:name="spiral.bit.dev.gamificationnote.ui.features.dashboard.guild.info.GuildInfoFragment"
+        android:label="fragment_guild_info"
+        tools:layout="@layout/fragment_guild_info" />
+    <fragment
+        android:id="@+id/guildSearchFragment"
+        android:name="spiral.bit.dev.gamificationnote.ui.features.dashboard.guild.search.GuildSearchFragment"
+        android:label="fragment_guild_search"
+        tools:layout="@layout/fragment_guild_search" />
+    <fragment
+        android:id="@+id/raidsFragment"
+        android:name="spiral.bit.dev.gamificationnote.ui.features.dashboard.raids.RaidsFragment"
+        android:label="fragment_raids"
+        tools:layout="@layout/fragment_raids" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="spiral.bit.dev.gamificationnote.ui.features.dashboard.settings.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/guildFragment"
+        android:name="spiral.bit.dev.gamificationnote.ui.features.dashboard.guild.GuildFragment"
+        android:label="fragment_guild"
+        tools:layout="@layout/fragment_guild" >
+        <action
+            android:id="@+id/toGuildBoss"
+            app:destination="@id/guildBossFragment" />
+        <action
+            android:id="@+id/toCreateGuild"
+            app:destination="@id/createGuildFragment" />
+        <action
+            android:id="@+id/toGuildChat"
+            app:destination="@id/guildChatFragment" />
+        <action
+            android:id="@+id/toGuildInfo"
+            app:destination="@id/guildInfoFragment" />
+        <action
+            android:id="@+id/toGuildSearch"
+            app:destination="@id/guildSearchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/heroFragment"
+        android:name="spiral.bit.dev.gamificationnote.ui.features.dashboard.hero.HeroFragment"
+        android:label="fragment_hero"
+        tools:layout="@layout/fragment_hero" >
+        <action
+            android:id="@+id/toHeroInventory"
+            app:destination="@id/heroInventoryFragment" />
+        <action
+            android:id="@+id/toHeroCustomize"
+            app:destination="@id/heroCustomizeFragment" />
+        <action
+            android:id="@+id/toHeroSkills"
+            app:destination="@id/heroSkillsFragment" />
+        <action
+            android:id="@+id/toHeroStats"
+            app:destination="@id/heroStatsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/heroInventoryFragment"
+        android:name="spiral.bit.dev.gamificationnote.ui.features.dashboard.hero.inventory.HeroInventoryFragment"
+        android:label="fragment_hero_inventory"
+        tools:layout="@layout/fragment_hero_inventory" />
+    <fragment
+        android:id="@+id/heroCustomizeFragment"
+        android:name="spiral.bit.dev.gamificationnote.ui.features.dashboard.hero.customize.HeroCustomizeFragment"
+        android:label="fragment_hero_customize"
+        tools:layout="@layout/fragment_hero_customize" />
+    <fragment
+        android:id="@+id/heroSkillsFragment"
+        android:name="spiral.bit.dev.gamificationnote.ui.features.dashboard.hero.skills.HeroSkillsFragment"
+        android:label="fragment_hero_skills"
+        tools:layout="@layout/fragment_hero_skills" />
+    <fragment
+        android:id="@+id/heroStatsFragment"
+        android:name="spiral.bit.dev.gamificationnote.ui.features.dashboard.hero.stats.HeroStatsFragment"
+        android:label="fragment_hero_stats"
+        tools:layout="@layout/fragment_hero_stats" />
+    <fragment
+        android:id="@+id/completedTasksFragment"
+        android:name="spiral.bit.dev.gamificationnote.ui.features.tasks.completed.CompletedTasksFragment"
+        android:label="fragment_completed_tasks"
+        tools:layout="@layout/fragment_completed_tasks" />
+    <fragment
+        android:id="@+id/compositeTasksFragment"
+        android:name="spiral.bit.dev.gamificationnote.ui.features.tasks.composite.CompositeTasksFragment"
+        android:label="fragment_composite_tasks"
+        tools:layout="@layout/fragment_composite_tasks" />
+    <fragment
+        android:id="@+id/foldersFragment"
+        android:name="spiral.bit.dev.gamificationnote.ui.features.tasks.folders.FoldersFragment"
+        android:label="fragment_folders"
+        tools:layout="@layout/fragment_folders" >
+        <action
+            android:id="@+id/toInFolderTasks"
+            app:destination="@id/inFolderTasksFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/inFolderTasksFragment"
+        android:name="spiral.bit.dev.gamificationnote.ui.features.tasks.folders.InFolderTasksFragment"
+        android:label="fragment_in_folder_tasks"
+        tools:layout="@layout/fragment_in_folder_tasks" />
+    <fragment
+        android:id="@+id/repeatingTasksFragment"
+        android:name="spiral.bit.dev.gamificationnote.ui.features.tasks.repeating.RepeatingTasksFragment"
+        android:label="fragment_repeating_tasks"
+        tools:layout="@layout/fragment_repeating_tasks" />
+    <fragment
+        android:id="@+id/simpleTasksFragment"
+        android:name="spiral.bit.dev.gamificationnote.ui.features.tasks.simple.SimpleTasksFragment"
+        android:label="fragment_simple_tasks"
+        tools:layout="@layout/fragment_simple_tasks" />
+</navigation>
