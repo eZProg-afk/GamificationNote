@@ -1,18 +1,9 @@
-pluginManagement {
-    repositories {
-        maven { setUrl("https://kotlin.bintray.com/kotlinx") }
-        gradlePluginPortal()
-        google()
-        mavenCentral()
-    }
-}
-
 dependencyResolutionManagement {
     repositories {
         google()
         gradlePluginPortal()
         mavenCentral()
-        maven { setUrl("https://jitpack.io") }
+        maven("https://jitpack.io")
     }
 }
 

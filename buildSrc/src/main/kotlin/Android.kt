@@ -1,10 +1,5 @@
 object Android {
 
-    object Repositories {
-        const val jitpack = "https://jitpack.io"
-        const val kotlinx = "https://kotlin.bintray.com/kotlinx"
-    }
-
     object Classpaths {
         object Versions {
             const val kotlin = "1.6.10"
@@ -15,13 +10,6 @@ object Android {
         const val gradle = "com.android.tools.build:gradle:${Versions.gradle}"
         const val kotlin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlin}"
         const val navigation = "androidx.navigation:navigation-safe-args-gradle-plugin:${Versions.navigation}"
-    }
-
-    object AppPlugins {
-        const val application = "com.android.application"
-        const val android = "android"
-        const val kapt = "kapt"
-        const val navigation = "androidx.navigation.safeargs"
     }
 
     object DefaultConfig {
