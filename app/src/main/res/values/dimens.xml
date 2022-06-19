@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="small_margin">8dp</dimen>
+    <dimen name="common_margin">16dp</dimen>
+    <dimen name="big_margin">32dp</dimen>
+
+    <dimen name="small_padding">8dp</dimen>
+    <dimen name="common_padding">16dp</dimen>
+    <dimen name="big_padding">24dp</dimen>
+
+    <dimen name="small_corner_radius">8dp</dimen>
+    <dimen name="common_corner_radius">16dp</dimen>
+    <dimen name="big_corner_radius">24dp</dimen>
+
+    <dimen name="small_text_size">18sp</dimen>
+    <dimen name="common_text_size">22sp</dimen>
+    <dimen name="big_text_size">30sp</dimen>
+</resources>

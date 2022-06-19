@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Attributes for text styling -->
+    <attr name="screenBoldStyle" format="reference" />
+    <attr name="screenMediumTextStyle" format="reference" />
+
+    <attr name="screenAccentColor" format="reference|color" />
+    <attr name="screenBackground" format="reference|color" />
+    <attr name="screenCardBackground" format="reference|color" />
+    <attr name="screenTextColor" format="reference|color" />
+    <attr name="screenOnCardTextColor" format="reference|color" />
+    <attr name="screenImageTint" format="reference|color" />
+
+    <attr name="screenTabLayoutBackgroundColor" format="reference|color" />
+    <attr name="screenOneTabBackgroundColor" format="reference|color" />
+    <attr name="screenTabSelectedTextColor" format="reference|color" />
+    <attr name="screenTabUnselectedTextColor" format="reference|color" />
+
+    <!-- BNV == BottomNavigationView -->
+    <attr name="screenBNVBackgroundColor" format="reference|color" />
+    <attr name="screenBNVIndicatorColor" format="reference|color" />
+    <attr name="screenBNVIconTint" format="reference|color" />
+    <attr name="screenBNVIconActiveTint" format="reference|color" />
+
+    <!-- Attributes for card on card, e.g. text view with background on card -->
+    <attr name="screenSurfaceBackground" format="reference|color" />
+    <attr name="screenOnSurfaceTextColor" format="reference|color" />
+    <attr name="screenSurfaceImageTint" format="reference|color" />
+
+    <attr name="screenProgressBarStrokeColor" format="reference|color" />
+    <attr name="screenProgressBarBackground" format="reference|color" />
+    <attr name="screenProgressBarFillStartColor" format="reference|color" />
+    <attr name="screenProgressBarFillEndColor" format="reference|color" />
+
+</resources>

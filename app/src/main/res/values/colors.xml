@@ -7,4 +7,19 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="selectedTabColor">@color/black</color>
+    <color name="unselectedTabColor">@color/white</color>
+    <color name="gray">#A98E8E</color>
+    <color name="light_gray">#F4F4F4</color>
+    
+    <color name="light_purple">#3029B8</color>
+    <color name="dark_purple">#161470</color>
+    <color name="pink">#FF00E5</color>
+    <color name="medium_purple">#400080</color>
+
+    <color name="common_rarity_color">#4CAF50</color>
+    <color name="rare_rarity_color">#60699D</color>
+    <color name="epic_rarity_color">#9C27B0</color>
+    <color name="legendary_rarity_color">#FF9800</color>
 </resources>

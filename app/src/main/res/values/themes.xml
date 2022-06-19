@@ -1,16 +1,45 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.GamificationNote" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
-        <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
-        <item name="colorOnPrimary">@color/white</item>
-        <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_700</item>
-        <item name="colorOnSecondary">@color/black</item>
-        <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
-        <!-- Customize your theme here. -->
+    <style name="Theme.GamificationNote" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:statusBarColor">@color/black</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+
+        <item name="tabTextAppearance">@style/Gamification.TabTextAppearance</item>
     </style>
+
+    <style name="Gamification.TabTextAppearance" parent="TextAppearance.AppCompat">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@font/ubuntu_bold</item>
+        <item name="android:textSize">@dimen/common_text_size</item>
+    </style>
+
+    <style name="Theme.GamificationNote.Default">
+
+        <item name="screenAccentColor">@color/purple_500</item>
+        <item name="screenBackground">@color/white</item>
+        <item name="screenCardBackground">@color/black</item>
+        <item name="screenTextColor">@color/black</item>
+        <item name="screenImageTint">@color/white</item>
+        <item name="screenOnCardTextColor">@color/white</item>
+
+        <item name="screenTabLayoutBackgroundColor">@color/light_gray</item>
+        <item name="screenOneTabBackgroundColor">@color/black</item>
+        <item name="screenTabSelectedTextColor">@color/white</item>
+        <item name="screenTabUnselectedTextColor">@color/gray</item>
+
+        <item name="screenBNVBackgroundColor">@color/black</item>
+        <item name="screenBNVIndicatorColor">@color/white</item>
+        <item name="screenBNVIconTint">@color/white</item>
+        <item name="screenBNVIconActiveTint">@color/black</item>
+
+        <item name="screenSurfaceBackground">@color/white</item>
+        <item name="screenSurfaceImageTint">@color/black</item>
+        <item name="screenOnSurfaceTextColor">@color/black</item>
+
+        <item name="screenProgressBarStrokeColor">@color/light_purple</item>
+        <item name="screenProgressBarBackground">@color/dark_purple</item>
+        <item name="screenProgressBarFillStartColor">@color/pink</item>
+        <item name="screenProgressBarFillEndColor">@color/medium_purple</item>
+    </style>
+
 </resources>
