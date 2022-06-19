@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?screenBackground"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    tools:context=".ui.features.shop.details.appDecoration.music.MusicItemDetailsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/toolbarDetail"
+            layout="@layout/toolbar_detail" />
+
+        <TextView
+            android:id="@+id/playerLabelTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/common_margin"
+            android:layout_marginTop="@dimen/common_margin"
+            android:background="@drawable/shape_rounded_16"
+            android:backgroundTint="?screenCardBackground"
+            android:fontFamily="@font/ubuntu_bold"
+            android:maxLines="3"
+            android:padding="@dimen/common_padding"
+            android:text="@string/item_player_label"
+            android:textColor="?screenOnCardTextColor"
+            android:textSize="@dimen/common_text_size"
+            app:drawableEndCompat="@drawable/ic_music"
+            app:drawableTint="?screenImageTint"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbarDetail" />
+
+        <include
+            android:id="@+id/playerView"
+            layout="@layout/view_player"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/common_margin"
+            android:layout_marginTop="@dimen/common_margin"
+            app:layout_constraintEnd_toEndOf="@id/toolbarDetail"
+            app:layout_constraintStart_toStartOf="@id/toolbarDetail"
+            app:layout_constraintTop_toBottomOf="@id/playerLabelTextView" />
+
+        <TextView
+            android:id="@+id/nameLabelTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/common_margin"
+            android:layout_marginTop="@dimen/common_margin"
+            android:background="@drawable/shape_rounded_16"
+            android:backgroundTint="?screenCardBackground"
+            android:fontFamily="@font/ubuntu_bold"
+            android:maxLines="3"
+            android:padding="@dimen/common_padding"
+            android:text="@string/item_name_label"
+            android:textColor="?screenOnCardTextColor"
+            android:textSize="@dimen/common_text_size"
+            app:drawableEndCompat="@drawable/ic_name"
+            app:drawableTint="?screenImageTint"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/playerView" />
+
+        <TextView
+            android:id="@+id/nameTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_margin"
+            android:fontFamily="@font/ubuntu_bold"
+            android:maxLines="3"
+            android:textColor="?screenTextColor"
+            android:textSize="@dimen/common_text_size"
+            app:layout_constraintEnd_toEndOf="@id/nameLabelTextView"
+            app:layout_constraintStart_toStartOf="@id/nameLabelTextView"
+            app:layout_constraintTop_toBottomOf="@id/nameLabelTextView"
+            tools:text="Броня древних" />
+
+        <TextView
+            android:id="@+id/descriptionLabelTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_margin"
+            android:background="@drawable/shape_rounded_16"
+            android:backgroundTint="?screenCardBackground"
+            android:fontFamily="@font/ubuntu_bold"
+            android:maxLines="3"
+            android:padding="@dimen/common_padding"
+            android:text="@string/item_description_label"
+            android:textColor="?screenOnCardTextColor"
+            android:textSize="@dimen/common_text_size"
+            app:drawableEndCompat="@drawable/ic_description"
+            app:drawableTint="?screenImageTint"
+            app:layout_constraintEnd_toEndOf="@id/nameTextView"
+            app:layout_constraintStart_toStartOf="@id/nameTextView"
+            app:layout_constraintTop_toBottomOf="@id/nameTextView" />
+
+        <TextView
+            android:id="@+id/descriptionTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_margin"
+            android:fontFamily="@font/ubuntu_bold"
+            android:maxLines="10"
+            android:textColor="?screenTextColor"
+            android:textSize="@dimen/common_text_size"
+            app:layout_constraintEnd_toEndOf="@id/nameTextView"
+            app:layout_constraintStart_toStartOf="@id/nameTextView"
+            app:layout_constraintTop_toBottomOf="@id/descriptionLabelTextView"
+            tools:text="Броня древних была выкована в легендарной кузне братьев орков, чьи старания затмевали абсолютно всех мастеров" />
+
+        <TextView
+            android:id="@+id/moneyPriceLabelTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_margin"
+            android:background="@drawable/shape_rounded_16"
+            android:backgroundTint="?screenCardBackground"
+            android:fontFamily="@font/ubuntu_bold"
+            android:maxLines="1"
+            android:padding="@dimen/common_padding"
+            android:text="@string/item_money_price_label"
+            android:textColor="?screenOnCardTextColor"
+            android:textSize="@dimen/common_text_size"
+            app:drawableEndCompat="@drawable/ic_money"
+            app:drawableTint="?screenImageTint"
+            app:layout_constraintEnd_toEndOf="@id/descriptionTextView"
+            app:layout_constraintStart_toStartOf="@id/descriptionTextView"
+            app:layout_constraintTop_toBottomOf="@id/descriptionTextView" />
+
+        <TextView
+            android:id="@+id/moneyPriceTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_margin"
+            android:fontFamily="@font/ubuntu_bold"
+            android:maxLines="1"
+            android:textColor="?screenTextColor"
+            android:textSize="@dimen/common_text_size"
+            app:layout_constraintEnd_toEndOf="@id/descriptionTextView"
+            app:layout_constraintStart_toStartOf="@id/descriptionTextView"
+            app:layout_constraintTop_toBottomOf="@id/moneyPriceLabelTextView"
+            tools:text="430 монет" />
+
+        <TextView
+            android:id="@+id/cristallPriceLabelTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_margin"
+            android:background="@drawable/shape_rounded_16"
+            android:backgroundTint="?screenCardBackground"
+            android:fontFamily="@font/ubuntu_bold"
+            android:maxLines="1"
+            android:padding="@dimen/common_padding"
+            android:text="@string/item_cristall_price_label"
+            android:textColor="?screenOnCardTextColor"
+            android:textSize="@dimen/common_text_size"
+            app:drawableEndCompat="@drawable/ic_cristall"
+            app:drawableTint="?screenImageTint"
+            app:layout_constraintEnd_toEndOf="@id/descriptionTextView"
+            app:layout_constraintStart_toStartOf="@id/descriptionTextView"
+            app:layout_constraintTop_toBottomOf="@id/moneyPriceTextView" />
+
+        <TextView
+            android:id="@+id/cristallPriceTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_margin"
+            android:fontFamily="@font/ubuntu_bold"
+            android:maxLines="1"
+            android:textColor="?screenTextColor"
+            android:textSize="@dimen/common_text_size"
+            app:layout_constraintEnd_toEndOf="@id/descriptionTextView"
+            app:layout_constraintStart_toStartOf="@id/descriptionTextView"
+            app:layout_constraintTop_toBottomOf="@id/cristallPriceLabelTextView"
+            tools:text="430 монет" />
+
+        <TextView
+            android:id="@+id/buyTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/common_margin"
+            android:background="@drawable/shape_rounded_16"
+            android:backgroundTint="?screenCardBackground"
+            android:fontFamily="@font/ubuntu_bold"
+            android:gravity="center"
+            android:padding="@dimen/common_padding"
+            android:text="@string/buy_label"
+            android:textColor="?screenOnCardTextColor"
+            android:textSize="@dimen/big_text_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/cristallPriceTextView"
+            app:layout_constraintStart_toStartOf="@id/cristallPriceTextView"
+            app:layout_constraintTop_toBottomOf="@id/cristallPriceTextView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

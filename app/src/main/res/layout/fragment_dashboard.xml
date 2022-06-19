@@ -1,14 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    android:background="?screenBackground"
     tools:context=".ui.features.dashboard.DashboardFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content">
 
-</FrameLayout>
+        <TextView
+            android:id="@+id/dashBoardLabelTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="@drawable/shape_rounded_16"
+            android:backgroundTint="?screenCardBackground"
+            android:fontFamily="@font/ubuntu_bold"
+            android:padding="16dp"
+            android:text="@string/dashboard_label"
+            android:textColor="?screenOnCardTextColor"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toStartOf="@id/settingsIconImageView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/settingsIconImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/shape_rounded_16"
+            android:backgroundTint="?screenCardBackground"
+            android:padding="16dp"
+            android:src="@drawable/ic_settings"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/dashBoardLabelTextView"
+            app:layout_constraintBottom_toBottomOf="@id/dashBoardLabelTextView"
+            app:tint="?screenImageTint"
+            android:contentDescription="@string/icon_settings_cd" />
+
+        <TextView
+            android:id="@+id/mainFeaturesLabelTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/dashBoardLabelTextView"
+            app:layout_constraintTop_toBottomOf="@id/dashBoardLabelTextView"
+            android:layout_marginTop="32dp"
+            android:textColor="?screenTextColor"
+            android:fontFamily="@font/ubuntu_bold"
+            android:text="@string/main_features_label"
+            android:textSize="25sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/featuresRecyclerView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:itemCount="4"
+            app:layout_constraintTop_toBottomOf="@id/mainFeaturesLabelTextView"
+            app:layout_constraintStart_toStartOf="@id/dashBoardLabelTextView"
+            app:layout_constraintEnd_toEndOf="@id/settingsIconImageView"
+            android:layout_marginTop="32dp"
+            tools:listitem="@layout/item_dashboard_feature"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="vertical" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/creatorConstraintLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/featuresRecyclerView"
+            app:layout_constraintStart_toStartOf="@id/featuresRecyclerView"
+            app:layout_constraintEnd_toEndOf="@id/featuresRecyclerView"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/shape_rounded_16"
+            android:backgroundTint="?screenCardBackground">
+
+            
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

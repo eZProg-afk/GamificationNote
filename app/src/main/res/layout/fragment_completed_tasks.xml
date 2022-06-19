@@ -1,14 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.features.tasks.completed.CompletedTasksFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?screenBackground"
+    tools:context=".ui.features.tasks.observe.completed.CompletedTasksFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/completedTasksTitleTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/small_margin"
+        android:layout_marginTop="@dimen/common_margin"
+        android:fontFamily="@font/ubuntu_bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="?screenTextColor"
+        android:textSize="@dimen/common_text_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/completed_tasks_label" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/howCompletedTasksWorkTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_margin"
+        android:fontFamily="@font/ubuntu_medium"
+        app:layout_constraintEnd_toEndOf="@id/completedTasksTitleTextView"
+        android:textColor="?screenTextColor"
+        android:textSize="@dimen/small_text_size"
+        app:layout_constraintStart_toStartOf="@id/completedTasksTitleTextView"
+        app:layout_constraintTop_toBottomOf="@id/completedTasksTitleTextView"
+        android:text="@string/how_completed_tasks_work" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/completedTasksRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/common_margin"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/common_padding"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/howCompletedTasksWorkTextView"
+        tools:listitem="@layout/item_repeating_task" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/clearCompletedTasksFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/common_margin"
+        android:padding="@dimen/common_padding"
+        android:textSize="@dimen/common_text_size"
+        android:text="@string/clear_label"
+        android:fontFamily="@font/ubuntu_bold"
+        android:textAllCaps="false"
+        android:background="@drawable/shape_rounded_16"
+        android:backgroundTint="?screenAccentColor"
+        app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

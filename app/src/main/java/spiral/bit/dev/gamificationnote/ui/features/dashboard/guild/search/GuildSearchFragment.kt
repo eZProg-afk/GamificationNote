@@ -6,8 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import spiral.bit.dev.gamificationnote.R
+import spiral.bit.dev.gamificationnote.databinding.FragmentGuildSearchBinding
+import spiral.bit.dev.gamificationnote.ui.base.BaseFragment
 
-class GuildSearchFragment : Fragment(R.layout.fragment_guild_search) {
+class GuildSearchFragment :
+    BaseFragment<FragmentGuildSearchBinding>(FragmentGuildSearchBinding::inflate) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

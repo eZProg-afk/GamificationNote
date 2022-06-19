@@ -36,9 +36,9 @@
         tools:layout="@layout/fragment_tasks" />
     <fragment
         android:id="@+id/shopFragment"
-        android:name="spiral.bit.dev.gamificationnote.ui.features.shop.ShopFragment"
+        android:name="spiral.bit.dev.gamificationnote.ui.features.shop.ShopCategoriesFragment"
         android:label="fragment_shop"
-        tools:layout="@layout/fragment_shop" />
+        tools:layout="@layout/fragment_shop_categories" />
     <fragment
         android:id="@+id/achievementsFragment"
         android:name="spiral.bit.dev.gamificationnote.ui.features.dashboard.achievements.AchievementsFragment"
@@ -155,17 +155,17 @@
         tools:layout="@layout/fragment_hero_stats" />
     <fragment
         android:id="@+id/completedTasksFragment"
-        android:name="spiral.bit.dev.gamificationnote.ui.features.tasks.completed.CompletedTasksFragment"
+        android:name="spiral.bit.dev.gamificationnote.ui.features.tasks.observe.completed.CompletedTasksFragment"
         android:label="fragment_completed_tasks"
         tools:layout="@layout/fragment_completed_tasks" />
     <fragment
         android:id="@+id/compositeTasksFragment"
-        android:name="spiral.bit.dev.gamificationnote.ui.features.tasks.composite.CompositeTasksFragment"
+        android:name="spiral.bit.dev.gamificationnote.ui.features.tasks.observe.composite.CompositeTasksFragment"
         android:label="fragment_composite_tasks"
         tools:layout="@layout/fragment_composite_tasks" />
     <fragment
         android:id="@+id/foldersFragment"
-        android:name="spiral.bit.dev.gamificationnote.ui.features.tasks.folders.FoldersFragment"
+        android:name="spiral.bit.dev.gamificationnote.ui.features.tasks.observe.folders.FoldersFragment"
         android:label="fragment_folders"
         tools:layout="@layout/fragment_folders" >
         <action
@@ -174,17 +174,17 @@
     </fragment>
     <fragment
         android:id="@+id/inFolderTasksFragment"
-        android:name="spiral.bit.dev.gamificationnote.ui.features.tasks.folders.InFolderTasksFragment"
+        android:name="spiral.bit.dev.gamificationnote.ui.features.tasks.observe.folders.InFolderTasksFragment"
         android:label="fragment_in_folder_tasks"
         tools:layout="@layout/fragment_in_folder_tasks" />
     <fragment
         android:id="@+id/repeatingTasksFragment"
-        android:name="spiral.bit.dev.gamificationnote.ui.features.tasks.repeating.RepeatingTasksFragment"
+        android:name="spiral.bit.dev.gamificationnote.ui.features.tasks.observe.repeating.RepeatingTasksFragment"
         android:label="fragment_repeating_tasks"
         tools:layout="@layout/fragment_repeating_tasks" />
     <fragment
         android:id="@+id/simpleTasksFragment"
-        android:name="spiral.bit.dev.gamificationnote.ui.features.tasks.simple.SimpleTasksFragment"
+        android:name="spiral.bit.dev.gamificationnote.ui.features.tasks.observe.simple.SimpleTasksFragment"
         android:label="fragment_simple_tasks"
         tools:layout="@layout/fragment_simple_tasks" />
 </navigation>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?screenBackground"
+    tools:context=".ui.features.tasks.create.SelectIconForTaskFragment">
+
+    <include
+        android:id="@+id/toolbarCreationInProgress"
+        layout="@layout/toolbar_creation_in_progress" />
+
+    <TextView
+        android:id="@+id/selectIconLabelTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_margin"
+        android:ellipsize="end"
+        android:fontFamily="@font/ubuntu_bold"
+        android:maxLines="1"
+        android:text="@string/select_task_icon_label"
+        android:textColor="?screenTextColor"
+        android:textSize="@dimen/common_text_size"
+        android:layout_margin="@dimen/common_margin"
+        app:layout_constraintEnd_toEndOf="@id/toolbarCreationInProgress"
+        app:layout_constraintStart_toStartOf="@id/toolbarCreationInProgress"
+        app:layout_constraintTop_toBottomOf="@id/toolbarCreationInProgress" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/iconRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="400dp"
+        android:layout_marginVertical="@dimen/common_margin"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintEnd_toEndOf="@id/selectIconLabelTextView"
+        app:layout_constraintStart_toStartOf="@id/selectIconLabelTextView"
+        app:layout_constraintTop_toBottomOf="@id/selectIconLabelTextView"
+        app:spanCount="5"
+        tools:itemCount="20"
+        tools:listitem="@layout/item_icon" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

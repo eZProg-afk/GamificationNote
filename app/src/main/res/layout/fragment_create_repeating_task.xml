@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?screenBackground"
+    tools:context=".ui.features.tasks.create.repeating.CreateRepeatingTaskFragment">
+
+    <include
+        android:id="@+id/toolbarCreationStart"
+        layout="@layout/toolbar_creation_start" />
+
+    <EditText
+        android:id="@+id/taskNameEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/common_margin"
+        android:layout_marginTop="@dimen/big_margin"
+        android:autofillHints="name"
+        android:background="@drawable/shape_rounded_16"
+        android:backgroundTint="?screenCardBackground"
+        android:ellipsize="end"
+        android:hint="@string/enter_task_name_hint"
+        android:importantForAutofill="yes"
+        android:inputType="text"
+        android:maxLines="1"
+        android:padding="@dimen/common_padding"
+        android:textColor="?screenOnCardTextColor"
+        android:textSize="@dimen/common_text_size"
+        app:layout_constraintEnd_toEndOf="@id/toolbarCreationStart"
+        app:layout_constraintStart_toStartOf="@id/toolbarCreationStart"
+        app:layout_constraintTop_toBottomOf="@id/toolbarCreationStart" />
+
+    <EditText
+        android:id="@+id/taskDescriptionEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_margin"
+        android:background="@drawable/shape_rounded_16"
+        android:backgroundTint="?screenCardBackground"
+        android:ellipsize="end"
+        android:gravity="start"
+        android:hint="@string/enter_task_description_hint"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:maxLines="6"
+        android:minHeight="200dp"
+        android:minLines="3"
+        android:padding="@dimen/common_padding"
+        android:textColor="?screenOnCardTextColor"
+        android:textSize="@dimen/common_text_size"
+        app:layout_constraintEnd_toEndOf="@id/taskNameEditText"
+        app:layout_constraintStart_toStartOf="@id/taskNameEditText"
+        app:layout_constraintTop_toBottomOf="@id/taskNameEditText" />
+
+    <TextView
+        android:id="@+id/selectAutoCreationTimeLabelTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_margin"
+        android:fontFamily="@font/ubuntu_bold"
+        android:text="@string/select_periodicity_auto_creation_of_task_label"
+        android:textColor="?screenTextColor"
+        android:textSize="@dimen/common_text_size"
+        app:layout_constraintEnd_toEndOf="@id/taskDescriptionEditText"
+        app:layout_constraintStart_toStartOf="@id/taskDescriptionEditText"
+        app:layout_constraintTop_toBottomOf="@id/taskDescriptionEditText" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/autoCreateChipGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/common_margin"
+        android:layout_marginTop="@dimen/common_margin"
+        android:background="@drawable/shape_rounded_16"
+        android:backgroundTint="?screenCardBackground"
+        android:padding="@dimen/small_padding"
+        app:chipSpacingVertical="@dimen/small_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selectAutoCreationTimeLabelTextView"
+        app:singleSelection="true">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/everyDayChip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_rounded_16"
+            android:backgroundTint="?screenSurfaceBackground"
+            android:buttonTint="?screenSurfaceImageTint"
+            android:fontFamily="@font/ubuntu_bold"
+            android:paddingEnd="@dimen/small_padding"
+            android:text="@string/every_day_creation_label"
+            android:textColor="?screenOnSurfaceTextColor"
+            android:textSize="@dimen/small_text_size"
+            tools:ignore="RtlSymmetry" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/everyMonthChip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_rounded_16"
+            android:backgroundTint="?screenSurfaceBackground"
+            android:buttonTint="?screenSurfaceImageTint"
+            android:fontFamily="@font/ubuntu_bold"
+            android:paddingEnd="@dimen/small_padding"
+            android:text="@string/every_month_creation_label"
+            android:textColor="?screenOnSurfaceTextColor"
+            android:textSize="@dimen/small_text_size"
+            tools:ignore="RtlSymmetry" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/everyYearChip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/shape_rounded_16"
+            android:backgroundTint="?screenSurfaceBackground"
+            android:buttonTint="?screenSurfaceImageTint"
+            android:fontFamily="@font/ubuntu_bold"
+            android:paddingEnd="@dimen/small_padding"
+            android:text="@string/every_year_creation_label"
+            android:textColor="?screenOnSurfaceTextColor"
+            android:textSize="@dimen/small_text_size"
+            tools:ignore="RtlSymmetry" />
+    </com.google.android.material.chip.ChipGroup>
+
+    <TextView
+        android:id="@+id/orSelectTimeAndDateManuallyLabelTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_margin"
+        android:fontFamily="@font/ubuntu_bold"
+        android:text="@string/select_time_and_date_manually_auto_creation_of_task_label"
+        android:textColor="?screenTextColor"
+        android:textSize="@dimen/common_text_size"
+        app:layout_constraintEnd_toEndOf="@id/taskDescriptionEditText"
+        app:layout_constraintStart_toStartOf="@id/taskDescriptionEditText"
+        app:layout_constraintTop_toBottomOf="@id/autoCreateChipGroup" />
+
+    <TextView
+        android:id="@+id/selectTimeAndDateManuallyTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/big_margin"
+        android:layout_marginEnd="@dimen/common_margin"
+        android:background="@drawable/shape_rounded_16"
+        android:backgroundTint="?screenCardBackground"
+        android:fontFamily="@font/ubuntu_bold"
+        android:padding="@dimen/common_padding"
+        android:text="@string/select_date_and_time_label"
+        android:textColor="?screenOnCardTextColor"
+        android:textSize="@dimen/common_text_size"
+        app:layout_constraintEnd_toEndOf="@id/orSelectTimeAndDateManuallyLabelTextView"
+        app:layout_constraintEnd_toStartOf="@id/selectedIconImageView"
+        app:layout_constraintStart_toStartOf="@id/orSelectTimeAndDateManuallyLabelTextView"
+        app:layout_constraintTop_toBottomOf="@id/orSelectTimeAndDateManuallyLabelTextView"
+        app:layout_goneMarginEnd="@dimen/small_margin" />
+
+    <ImageView
+        android:id="@+id/selectedIconImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_rounded_16"
+        android:backgroundTint="?screenCardBackground"
+        android:contentDescription="@string/icon_submit_manually_select_date_cd"
+        android:padding="@dimen/common_padding"
+        android:src="@drawable/ic_done"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/selectTimeAndDateManuallyTextView"
+        app:layout_constraintEnd_toEndOf="@id/taskDescriptionEditText"
+        app:layout_constraintStart_toEndOf="@id/selectTimeAndDateManuallyTextView"
+        app:layout_constraintTop_toTopOf="@id/selectTimeAndDateManuallyTextView"
+        app:tint="?screenImageTint" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

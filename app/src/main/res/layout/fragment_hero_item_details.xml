@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?screenBackground"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    tools:context=".ui.features.shop.details.hero.HeroItemDetailsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/toolbarDetail"
+            layout="@layout/toolbar_detail" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/itemImageView"
+            android:layout_width="0dp"
+            android:layout_height="300dp"
+            android:layout_marginHorizontal="@dimen/common_margin"
+            android:layout_marginTop="@dimen/big_margin"
+            android:background="@drawable/shape_rounded_16"
+            android:backgroundTint="?screenCardBackground"
+            app:layout_constraintEnd_toEndOf="@id/toolbarDetail"
+            app:layout_constraintStart_toStartOf="@id/toolbarDetail"
+            app:layout_constraintTop_toBottomOf="@id/toolbarDetail"
+            app:riv_corner_radius="@dimen/common_corner_radius" />
+
+        <TextView
+            android:id="@+id/nameLabelTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_margin"
+            android:background="@drawable/shape_rounded_16"
+            android:backgroundTint="?screenCardBackground"
+            android:fontFamily="@font/ubuntu_bold"
+            android:maxLines="3"
+            android:padding="@dimen/common_padding"
+            android:text="@string/item_name_label"
+            android:textColor="?screenOnCardTextColor"
+            android:textSize="@dimen/common_text_size"
+            app:drawableEndCompat="@drawable/ic_name"
+            app:drawableTint="?screenImageTint"
+            app:layout_constraintEnd_toEndOf="@id/itemImageView"
+            app:layout_constraintStart_toStartOf="@id/itemImageView"
+            app:layout_constraintTop_toBottomOf="@id/itemImageView" />
+
+        <TextView
+            android:id="@+id/nameTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_margin"
+            android:fontFamily="@font/ubuntu_bold"
+            android:maxLines="3"
+            android:textColor="?screenTextColor"
+            android:textSize="@dimen/common_text_size"
+            app:layout_constraintEnd_toEndOf="@id/itemImageView"
+            app:layout_constraintStart_toStartOf="@id/itemImageView"
+            app:layout_constraintTop_toBottomOf="@id/nameLabelTextView"
+            tools:text="Броня древних" />
+
+        <TextView
+            android:id="@+id/descriptionLabelTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_margin"
+            android:background="@drawable/shape_rounded_16"
+            android:backgroundTint="?screenCardBackground"
+            android:fontFamily="@font/ubuntu_bold"
+            android:maxLines="3"
+            android:padding="@dimen/common_padding"
+            android:text="@string/item_description_label"
+            android:textColor="?screenOnCardTextColor"
+            android:textSize="@dimen/common_text_size"
+            app:drawableEndCompat="@drawable/ic_description"
+            app:drawableTint="?screenImageTint"
+            app:layout_constraintEnd_toEndOf="@id/itemImageView"
+            app:layout_constraintStart_toStartOf="@id/itemImageView"
+            app:layout_constraintTop_toBottomOf="@id/nameTextView" />
+
+        <TextView
+            android:id="@+id/descriptionTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_margin"
+            android:fontFamily="@font/ubuntu_bold"
+            android:maxLines="10"
+            android:textColor="?screenTextColor"
+            android:textSize="@dimen/common_text_size"
+            app:layout_constraintEnd_toEndOf="@id/itemImageView"
+            app:layout_constraintStart_toStartOf="@id/itemImageView"
+            app:layout_constraintTop_toBottomOf="@id/descriptionLabelTextView"
+            tools:text="Броня древних была выкована в легендарной кузне братьев орков, чьи старания затмевали абсолютно всех мастеров" />
+
+        <TextView
+            android:id="@+id/rarityLabelTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_margin"
+            android:background="@drawable/shape_rounded_16"
+            android:backgroundTint="?screenCardBackground"
+            android:fontFamily="@font/ubuntu_bold"
+            android:maxLines="1"
+            android:padding="@dimen/common_padding"
+            android:text="@string/item_rarity_label"
+            android:textColor="?screenOnCardTextColor"
+            android:textSize="@dimen/common_text_size"
+            app:drawableEndCompat="@drawable/ic_difficult"
+            app:drawableTint="?screenImageTint"
+            app:layout_constraintEnd_toEndOf="@id/itemImageView"
+            app:layout_constraintStart_toStartOf="@id/itemImageView"
+            app:layout_constraintTop_toBottomOf="@id/descriptionTextView" />
+
+        <TextView
+            android:id="@+id/rarityTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_margin"
+            android:fontFamily="@font/ubuntu_bold"
+            android:maxLines="1"
+            android:textColor="?screenTextColor"
+            android:textSize="@dimen/common_text_size"
+            app:layout_constraintEnd_toEndOf="@id/itemImageView"
+            app:layout_constraintStart_toStartOf="@id/itemImageView"
+            app:layout_constraintTop_toBottomOf="@id/rarityLabelTextView"
+            tools:text="Легендарная" />
+
+        <TextView
+            android:id="@+id/attributesLabelTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_margin"
+            android:background="@drawable/shape_rounded_16"
+            android:backgroundTint="?screenCardBackground"
+            android:fontFamily="@font/ubuntu_bold"
+            android:maxLines="1"
+            android:padding="@dimen/common_padding"
+            android:text="@string/item_attributes_label"
+            android:textColor="?screenOnCardTextColor"
+            android:textSize="@dimen/common_text_size"
+            app:drawableEndCompat="@drawable/ic_attributes"
+            app:drawableTint="?screenImageTint"
+            app:layout_constraintEnd_toEndOf="@id/itemImageView"
+            app:layout_constraintStart_toStartOf="@id/itemImageView"
+            app:layout_constraintTop_toBottomOf="@id/rarityTextView" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/attributesRecyclerView"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintEnd_toEndOf="@id/attributesLabelTextView"
+            app:layout_constraintStart_toStartOf="@id/attributesLabelTextView"
+            app:layout_constraintTop_toBottomOf="@id/attributesLabelTextView"
+            app:spanCount="2"
+            tools:listitem="@layout/item_hero_attribute" />
+
+        <TextView
+            android:id="@+id/moneyPriceLabelTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_margin"
+            android:background="@drawable/shape_rounded_16"
+            android:backgroundTint="?screenCardBackground"
+            android:fontFamily="@font/ubuntu_bold"
+            android:maxLines="1"
+            android:padding="@dimen/common_padding"
+            android:text="@string/item_money_price_label"
+            android:textColor="?screenOnCardTextColor"
+            android:textSize="@dimen/common_text_size"
+            app:drawableEndCompat="@drawable/ic_money"
+            app:drawableTint="?screenImageTint"
+            app:layout_constraintEnd_toEndOf="@id/itemImageView"
+            app:layout_constraintStart_toStartOf="@id/itemImageView"
+            app:layout_constraintTop_toBottomOf="@id/attributesRecyclerView" />
+
+        <TextView
+            android:id="@+id/moneyPriceTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_margin"
+            android:fontFamily="@font/ubuntu_bold"
+            android:maxLines="1"
+            android:textColor="?screenTextColor"
+            android:textSize="@dimen/common_text_size"
+            app:layout_constraintEnd_toEndOf="@id/itemImageView"
+            app:layout_constraintStart_toStartOf="@id/itemImageView"
+            app:layout_constraintTop_toBottomOf="@id/moneyPriceLabelTextView"
+            tools:text="430 монет" />
+
+        <TextView
+            android:id="@+id/cristallPriceLabelTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_margin"
+            android:background="@drawable/shape_rounded_16"
+            android:backgroundTint="?screenCardBackground"
+            android:fontFamily="@font/ubuntu_bold"
+            android:maxLines="1"
+            android:padding="@dimen/common_padding"
+            android:text="@string/item_cristall_price_label"
+            android:textColor="?screenOnCardTextColor"
+            android:textSize="@dimen/common_text_size"
+            app:drawableEndCompat="@drawable/ic_cristall"
+            app:drawableTint="?screenImageTint"
+            app:layout_constraintEnd_toEndOf="@id/itemImageView"
+            app:layout_constraintStart_toStartOf="@id/itemImageView"
+            app:layout_constraintTop_toBottomOf="@id/moneyPriceTextView" />
+
+        <TextView
+            android:id="@+id/cristallPriceTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_margin"
+            android:fontFamily="@font/ubuntu_bold"
+            android:maxLines="1"
+            android:textColor="?screenTextColor"
+            android:textSize="@dimen/common_text_size"
+            app:layout_constraintEnd_toEndOf="@id/itemImageView"
+            app:layout_constraintStart_toStartOf="@id/itemImageView"
+            app:layout_constraintTop_toBottomOf="@id/cristallPriceLabelTextView"
+            tools:text="430 монет" />
+
+        <TextView
+            android:id="@+id/buyTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/common_margin"
+            android:background="@drawable/shape_rounded_16"
+            android:backgroundTint="?screenCardBackground"
+            android:gravity="center"
+            android:padding="@dimen/common_padding"
+            android:fontFamily="@font/ubuntu_bold"
+            android:text="@string/buy_label"
+            android:textColor="?screenOnCardTextColor"
+            android:textSize="@dimen/big_text_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/cristallPriceTextView"
+            app:layout_constraintStart_toStartOf="@id/cristallPriceTextView"
+            app:layout_constraintTop_toBottomOf="@id/cristallPriceTextView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

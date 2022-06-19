@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/shape_rounded_16"
+    android:backgroundTint="?screenCardBackground"
+    android:layout_marginVertical="@dimen/small_margin"
+    android:layout_marginHorizontal="@dimen/common_margin">
+
+    <TextView
+        android:id="@+id/shopItemNameTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/common_margin"
+        android:fontFamily="@font/ubuntu_bold"
+        android:textColor="?screenOnCardTextColor"
+        android:textSize="@dimen/common_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Персиковая тема" />
+
+    <View
+        android:id="@+id/colorView"
+        android:layout_width="0dp"
+        android:layout_height="140dp"
+        android:layout_margin="@dimen/common_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/shopItemNameTextView"
+        android:background="@drawable/shape_rounded_16"
+        android:backgroundTint="#E1704C" />
+
+    <TextView
+        android:id="@+id/readMoreTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/common_margin"
+        android:background="@drawable/shape_rounded_16"
+        android:backgroundTint="?screenSurfaceBackground"
+        android:fontFamily="@font/ubuntu_bold"
+        android:padding="@dimen/common_padding"
+        android:textColor="?screenOnSurfaceTextColor"
+        android:textSize="@dimen/common_text_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/colorView"
+        tools:text="Читать подробнее"
+        app:drawableTint="?screenSurfaceImageTint"
+        app:drawableEndCompat="@drawable/ic_read_more" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?screenBackground"
+    tools:context=".ui.features.shop.observe.appDecoration.AppDecorationShopFragment">
+
+    <TextView
+        android:id="@+id/appDecorationCustomizationLabelTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/common_margin"
+        android:fontFamily="@font/ubuntu_bold"
+        android:text="@string/select_purchase_category_label"
+        android:textColor="?screenTextColor"
+        android:textSize="@dimen/common_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/selectPurchaseCategoryLabelTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/common_margin"
+        android:fontFamily="@font/ubuntu_bold"
+        android:text="@string/select_purchase_category_label"
+        android:textColor="?screenTextColor"
+        android:textSize="@dimen/common_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="@dimen/common_margin"
+        android:background="@drawable/tab_layout_background"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@id/selectPurchaseCategoryLabelTextView"
+        app:layout_constraintStart_toStartOf="@id/selectPurchaseCategoryLabelTextView"
+        app:layout_constraintTop_toBottomOf="@id/selectPurchaseCategoryLabelTextView"
+        app:tabBackground="@drawable/shape_6_rounded_tab"
+        app:tabIndicator="@null"
+        app:tabMode="scrollable"
+        app:tabSelectedTextColor="?screenTabSelectedTextColor"
+        app:tabTextColor="?screenTabUnselectedTextColor" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tabLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

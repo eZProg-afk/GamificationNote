@@ -12,7 +12,7 @@
         android:name=".ui.GamificationNoteApp"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.GamificationNote"
+        android:theme="@style/Theme.GamificationNote.Default"
         tools:targetApi="31">
         <activity
             android:name=".ui.features.main.MainActivity"

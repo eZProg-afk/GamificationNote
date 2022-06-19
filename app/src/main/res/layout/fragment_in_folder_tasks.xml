@@ -1,14 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.features.tasks.folders.InFolderTasksFragment">
+    android:background="?screenBackground"
+    tools:context=".ui.features.tasks.observe.folders.InFolderTasksFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/folderTitleTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/small_margin"
+        android:background="@drawable/shape_rounded_16"
+        android:backgroundTint="?screenCardBackground"
+        android:fontFamily="@font/ubuntu_bold"
+        android:padding="@dimen/common_padding"
+        android:textColor="?screenOnCardTextColor"
+        android:textSize="@dimen/common_text_size"
+        app:layout_constraintEnd_toStartOf="@id/iconBackImageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Задачи в папке 'На день'" />
 
-</FrameLayout>
+    <ImageView
+        android:id="@+id/iconBackImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/common_margin"
+        android:background="@drawable/shape_rounded_16"
+        android:backgroundTint="?screenCardBackground"
+        android:padding="@dimen/common_padding"
+        android:src="@drawable/ic_back"
+        app:layout_constraintBottom_toBottomOf="@id/folderTitleTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/folderTitleTextView"
+        app:tint="?screenImageTint"
+        android:contentDescription="@string/icon_back_cd" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/inFolderTasksRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/common_margin"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/common_padding"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/folderTitleTextView"
+        tools:listitem="@layout/item_repeating_task" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addInFolderTaskFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/common_margin"
+        android:padding="@dimen/common_padding"
+        android:src="@drawable/ic_add"
+        android:tint="?screenImageTint"
+        app:backgroundTint="?screenAccentColor"
+        app:fabCustomSize="90dp"
+        app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="@string/icon_add_in_folder_task_cd" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

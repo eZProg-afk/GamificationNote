@@ -4,15 +4,43 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="?screenBackground"
     tools:context=".ui.features.main.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/mainFragmentContainerView"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_height="0dp"
+        app:defaultNavHost="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/bottomNavigationView"
+        app:navGraph="@navigation/app_nav_graph" />
+
+    <me.ibrahimsn.lib.SmoothBottomBar
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_margin="16dp"
+        app:backgroundColor="?attr/screenBNVBackgroundColor"
+        app:cornerRadius="24dp"
+        app:corners="all"
+        app:duration="1000"
+        app:iconSize="20dp"
+        app:iconTint="?screenBNVIconTint"
+        app:iconTintActive="?screenBNVIconActiveTint"
+        app:indicatorColor="?attr/screenBNVIndicatorColor"
+        app:indicatorRadius="24dp"
+        app:itemPadding="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:menu="@menu/bottom_menu"
+        app:sideMargins="8dp"
+        app:textColor="@android:color/transparent"
+        app:textSize="16sp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

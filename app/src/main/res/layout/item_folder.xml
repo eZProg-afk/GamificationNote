@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="260dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/shape_rounded_16"
+    android:layout_margin="@dimen/small_margin"
+    android:backgroundTint="?screenCardBackground">
+
+    <TextView
+        android:id="@+id/folderTitleTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/common_margin"
+        android:fontFamily="@font/ubuntu_bold"
+        android:textColor="?screenOnCardTextColor"
+        android:textSize="@dimen/common_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Убраться в квартире" />
+
+    <TextView
+        android:id="@+id/folderSmallDescriptionTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/common_margin"
+        android:fontFamily="@font/ubuntu_bold"
+        android:textColor="?screenOnCardTextColor"
+        android:textSize="@dimen/small_text_size"
+        android:maxLines="3"
+        android:ellipsize="end"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/folderTitleTextView"
+        tools:text="Описание задачи Описание задачи Описание задачи Описание задачи Описание задачи" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/common_margin"
+        app:layout_constraintTop_toBottomOf="@id/folderSmallDescriptionTextView"
+        app:layout_constraintStart_toStartOf="@id/folderSmallDescriptionTextView"
+        app:layout_constraintEnd_toEndOf="@id/folderSmallDescriptionTextView"
+        android:src="@drawable/ic_folder"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:tint="?screenImageTint"
+        android:contentDescription="@string/icon_folder_cd" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

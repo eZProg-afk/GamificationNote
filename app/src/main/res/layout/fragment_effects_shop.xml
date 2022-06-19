@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?screenBackground"
+    tools:context=".ui.features.shop.observe.appDecoration.EffectsShopFragment">
+
+    <TextView
+        android:id="@+id/effectsShopLabelTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:fontFamily="@font/ubuntu_bold"
+        android:textSize="@dimen/big_text_size"
+        android:textColor="?screenTextColor"
+        android:layout_margin="@dimen/common_margin"
+        android:text="@string/effect_shop_label" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/effectRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:paddingBottom="@dimen/common_padding"
+        app:layout_constraintTop_toBottomOf="@id/effectsShopLabelTextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_marginTop="@dimen/common_margin"
+        android:orientation="vertical"
+        tools:listitem="@layout/item_effect_shop" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

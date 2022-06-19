@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?screenBackground"
+    tools:context=".ui.features.tasks.create.SelectDifficultForTaskFragment">
+
+
+    <include
+        android:id="@+id/toolbarCreationFinish"
+        layout="@layout/toolbar_creation_finish" />
+
+    <TextView
+        android:id="@+id/selectDifficultLabelTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/big_margin"
+        android:ellipsize="end"
+        android:fontFamily="@font/ubuntu_bold"
+        android:maxLines="1"
+        android:text="@string/select_difficult_label"
+        android:textColor="?screenTextColor"
+        android:textSize="@dimen/common_text_size"
+        android:layout_marginHorizontal="@dimen/common_margin"
+        app:layout_constraintEnd_toEndOf="@id/toolbarCreationFinish"
+        app:layout_constraintStart_toStartOf="@id/toolbarCreationFinish"
+        app:layout_constraintTop_toBottomOf="@id/toolbarCreationFinish" />
+
+    <RadioGroup
+        android:id="@+id/taskRarityRadioGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/common_margin"
+        app:layout_constraintEnd_toEndOf="@id/selectDifficultLabelTextView"
+        app:layout_constraintStart_toStartOf="@id/selectDifficultLabelTextView"
+        app:layout_constraintTop_toBottomOf="@id/selectDifficultLabelTextView">
+
+        <RadioButton
+            android:id="@+id/commonTaskRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_rounded_16"
+            android:backgroundTint="?screenCardBackground"
+            android:checked="true"
+            android:drawableEnd="@drawable/ic_difficult"
+            android:drawablePadding="@dimen/common_padding"
+            android:drawableTint="@color/common_rarity_color"
+            android:fontFamily="@font/ubuntu_bold"
+            android:paddingVertical="@dimen/common_padding"
+            android:paddingStart="@dimen/small_padding"
+            android:paddingEnd="@dimen/common_padding"
+            android:text="@string/common_task"
+            android:textColor="?screenOnCardTextColor"
+            tools:ignore="RtlSymmetry"
+            tools:targetApi="m" />
+
+        <RadioButton
+            android:id="@+id/rareTaskRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_margin"
+            android:background="@drawable/shape_rounded_16"
+            android:backgroundTint="?screenCardBackground"
+            android:drawableEnd="@drawable/ic_difficult"
+            android:drawablePadding="@dimen/common_padding"
+            android:drawableTint="@color/rare_rarity_color"
+            android:fontFamily="@font/ubuntu_bold"
+            android:paddingVertical="@dimen/common_padding"
+            android:paddingStart="@dimen/small_padding"
+            android:paddingEnd="@dimen/common_padding"
+            android:text="@string/rare_task"
+            android:textColor="?screenOnCardTextColor"
+            tools:ignore="RtlSymmetry"
+            tools:targetApi="m" />
+
+        <RadioButton
+            android:id="@+id/epicTaskRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_margin"
+            android:background="@drawable/shape_rounded_16"
+            android:backgroundTint="?screenCardBackground"
+            android:drawableEnd="@drawable/ic_difficult"
+            android:drawablePadding="@dimen/common_padding"
+            android:drawableTint="@color/epic_rarity_color"
+            android:fontFamily="@font/ubuntu_bold"
+            android:paddingVertical="@dimen/common_padding"
+            android:paddingStart="@dimen/small_padding"
+            android:paddingEnd="@dimen/common_padding"
+            android:text="@string/epic_task"
+            android:textColor="?screenOnCardTextColor"
+            tools:ignore="RtlSymmetry"
+            tools:targetApi="m" />
+
+        <RadioButton
+            android:id="@+id/legendaryTaskRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_margin"
+            android:background="@drawable/shape_rounded_16"
+            android:backgroundTint="?screenCardBackground"
+            android:drawableEnd="@drawable/ic_difficult"
+            android:drawablePadding="@dimen/common_padding"
+            android:drawableTint="@color/legendary_rarity_color"
+            android:fontFamily="@font/ubuntu_bold"
+            android:paddingVertical="@dimen/common_padding"
+            android:paddingStart="@dimen/small_padding"
+            android:paddingEnd="@dimen/common_padding"
+            android:text="@string/legendary_task"
+            android:textColor="?screenOnCardTextColor"
+            tools:ignore="RtlSymmetry"
+            tools:targetApi="m" />
+
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/common_margin"
+    android:layout_marginVertical="@dimen/small_margin">
+
+    <CheckBox
+        android:id="@+id/subTaskCheckbox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:background="@drawable/shape_rounded_16"
+        android:backgroundTint="?screenCardBackground"
+        android:button="@null"
+        android:drawableStart="@drawable/checkbox_selector"
+        android:drawablePadding="16dp"
+        android:fontFamily="@font/ubuntu_bold"
+        android:maxLines="3"
+        android:ellipsize="end"
+        android:padding="@dimen/common_padding"
+        android:textColor="?screenOnCardTextColor"
+        android:textSize="@dimen/common_text_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/iconDeleteSubTaskImageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Заправить автомобиль" />
+
+    <ImageView
+        android:id="@+id/iconDeleteSubTaskImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="@dimen/common_margin"
+        android:background="@drawable/shape_rounded_16"
+        android:backgroundTint="?screenCardBackground"
+        android:src="@drawable/ic_delete"
+        app:layout_constraintBottom_toBottomOf="@id/subTaskCheckbox"
+        android:padding="@dimen/common_padding"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/subTaskCheckbox"
+        app:tint="?screenImageTint"
+        android:contentDescription="@string/icon_delete_sub_task_cd" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

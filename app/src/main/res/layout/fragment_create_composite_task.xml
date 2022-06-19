@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?screenBackground"
+    tools:context=".ui.features.tasks.create.composite.CreateCompositeTaskFragment">
+
+    <include
+        android:id="@+id/toolbarCreationStart"
+        layout="@layout/toolbar_creation_start" />
+
+    <EditText
+        android:id="@+id/taskNameEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/big_margin"
+        android:autofillHints="name"
+        android:background="@drawable/shape_rounded_16"
+        android:backgroundTint="?screenCardBackground"
+        android:ellipsize="end"
+        android:layout_marginHorizontal="@dimen/common_margin"
+        android:hint="@string/enter_task_name_hint"
+        android:importantForAutofill="yes"
+        android:inputType="text"
+        android:maxLines="1"
+        android:padding="@dimen/common_padding"
+        android:textColor="?screenOnCardTextColor"
+        android:textSize="@dimen/common_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbarCreationStart" />
+
+    <EditText
+        android:id="@+id/subTaskNameEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/big_margin"
+        android:autofillHints="name"
+        android:background="@drawable/shape_rounded_16"
+        android:backgroundTint="?screenCardBackground"
+        android:ellipsize="end"
+        android:layout_marginHorizontal="@dimen/common_margin"
+        android:hint="@string/enter_sub_task_name_hint"
+        android:importantForAutofill="yes"
+        android:inputType="text"
+        android:maxLines="1"
+        android:padding="@dimen/common_padding"
+        android:textColor="?screenOnCardTextColor"
+        android:textSize="@dimen/common_text_size"
+        app:layout_constraintEnd_toStartOf="@id/iconAddSubTaskImageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/taskNameEditText" />
+
+    <ImageView
+        android:id="@+id/iconAddSubTaskImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="@drawable/shape_rounded_16"
+        android:backgroundTint="?screenCardBackground"
+        android:padding="@dimen/common_padding"
+        app:layout_constraintEnd_toEndOf="@id/taskNameEditText"
+        app:layout_constraintTop_toTopOf="@id/subTaskNameEditText"
+        app:layout_constraintBottom_toBottomOf="@id/subTaskNameEditText"
+        android:src="@drawable/ic_done"
+        app:tint="?screenImageTint"
+        android:contentDescription="@string/icon_add_sub_task_cd" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/subtasksRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="400dp"
+        android:layout_marginVertical="16dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/subTaskNameEditText"
+        tools:listitem="@layout/item_composite_subtask" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

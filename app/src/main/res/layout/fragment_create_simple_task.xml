@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?screenBackground"
+    tools:context=".ui.features.tasks.create.simple.CreateSimpleTaskFragment">
+
+    <include
+        android:id="@+id/toolbarCreationStart"
+        layout="@layout/toolbar_creation_start" />
+
+    <EditText
+        android:id="@+id/taskNameEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/big_margin"
+        android:autofillHints="name"
+        android:background="@drawable/shape_rounded_16"
+        android:backgroundTint="?screenCardBackground"
+        android:ellipsize="end"
+        android:hint="@string/enter_task_name_hint"
+        android:importantForAutofill="yes"
+        android:inputType="text"
+        android:maxLines="1"
+        android:padding="@dimen/common_padding"
+        android:textColor="?screenOnCardTextColor"
+        android:textSize="@dimen/common_text_size"
+        android:layout_marginHorizontal="@dimen/common_margin"
+        app:layout_constraintEnd_toEndOf="@id/toolbarCreationStart"
+        app:layout_constraintStart_toStartOf="@id/toolbarCreationStart"
+        app:layout_constraintTop_toBottomOf="@id/toolbarCreationStart" />
+
+    <EditText
+        android:id="@+id/taskDescriptionEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_margin"
+        android:background="@drawable/shape_rounded_16"
+        android:backgroundTint="?screenCardBackground"
+        android:ellipsize="end"
+        android:gravity="start"
+        android:hint="@string/enter_task_description_hint"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:maxLines="6"
+        android:minHeight="200dp"
+        android:minLines="3"
+        android:padding="@dimen/common_padding"
+        android:textColor="?screenOnCardTextColor"
+        android:textSize="@dimen/common_text_size"
+        app:layout_constraintEnd_toEndOf="@id/taskNameEditText"
+        app:layout_constraintStart_toStartOf="@id/taskNameEditText"
+        app:layout_constraintTop_toBottomOf="@id/taskNameEditText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

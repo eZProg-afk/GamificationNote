@@ -6,8 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import spiral.bit.dev.gamificationnote.R
+import spiral.bit.dev.gamificationnote.databinding.FragmentCreateGuildBinding
+import spiral.bit.dev.gamificationnote.ui.base.BaseFragment
 
-class CreateGuildFragment : Fragment(R.layout.fragment_create_guild) {
+class CreateGuildFragment :
+    BaseFragment<FragmentCreateGuildBinding>(FragmentCreateGuildBinding::inflate) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
