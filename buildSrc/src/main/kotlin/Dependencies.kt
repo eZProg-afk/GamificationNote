@@ -11,6 +11,10 @@ object Dependencies {
         const val coreKtx = "1.8.0"
         const val appCompat = "1.4.2"
         const val material = "1.6.1"
+        const val viewBindingPropertyDelegate = "1.4.2"
+        const val smoothBottomBar = "1.7.9"
+        const val roundedImageView = "2.3.0"
+        const val adapterDelegates = "4.3.1"
         const val constraintlayout = "2.1.4"
         const val kodein = "7.12.0"
     }
@@ -41,6 +45,11 @@ object Dependencies {
     const val coreKtx = "androidx.core:core-ktx:${Versions.coreKtx}"
     const val constraintlayout =
         "androidx.constraintlayout:constraintlayout:${Versions.constraintlayout}"
+    const val adapterDelegatesDsl = "com.hannesdorfmann:adapterdelegates4-kotlin-dsl:${Versions.adapterDelegates}"
+    const val adapterDelegatesViewBinding = "com.hannesdorfmann:adapterdelegates4-kotlin-dsl-viewbinding:${Versions.adapterDelegates}"
+    const val viewBindingDelegate = "com.kirich1409.viewbindingpropertydelegate:viewbindingpropertydelegate:${Versions.viewBindingPropertyDelegate}"
+    const val smoothBottomBar = "com.github.ibrahimsn98:SmoothBottomBar:${Versions.smoothBottomBar}"
+    const val roundedImageView = "com.makeramen:roundedimageview:${Versions.roundedImageView}"
 
     const val kodeinDI = "org.kodein.di:kodein-di:${Versions.kodein}"
     const val kodeinAndroidX = "org.kodein.di:kodein-di-framework-android-x:${Versions.kodein}"
@@ -52,6 +61,11 @@ fun DependencyHandler.addCommonAndroid() {
     implementation(Dependencies.material)
     implementation(Dependencies.coreKtx)
     implementation(Dependencies.constraintlayout)
+    implementation(Dependencies.adapterDelegatesDsl)
+    implementation(Dependencies.adapterDelegatesViewBinding)
+    implementation(Dependencies.viewBindingDelegate)
+    implementation(Dependencies.smoothBottomBar)
+    implementation(Dependencies.roundedImageView)
 }
 
 fun DependencyHandler.addDI() {

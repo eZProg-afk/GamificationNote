@@ -3,7 +3,7 @@ dependencyResolutionManagement {
         google()
         gradlePluginPortal()
         mavenCentral()
-        maven("https://jitpack.io")
+        maven { setUrl("https://www.jitpack.io") }
     }
 }
 
