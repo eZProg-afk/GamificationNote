@@ -1,4 +1,4 @@
-package spiral.bit.dev.gamificationnote.data.dto
+package spiral.bit.dev.gamificationnote.data.dto.hero
 
 data class Hero(
     val nickName: String,

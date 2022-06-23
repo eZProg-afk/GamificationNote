@@ -75,4 +75,6 @@
     <string name="icon_folder_cd">Иконка папки</string>
     <string name="icon_add_sub_task_cd">Кнопка добавить подзадачу</string>
     <string name="icon_submit_manually_select_date_cd">Кнопка подтвердить выбор даты вручную</string>
+    <string name="task_database_name">tasks_db</string>
+    <string name="shop_database_name">shop_db</string>
 </resources>
