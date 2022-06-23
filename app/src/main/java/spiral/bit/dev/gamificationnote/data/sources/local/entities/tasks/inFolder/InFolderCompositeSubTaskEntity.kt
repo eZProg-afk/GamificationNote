@@ -13,7 +13,10 @@ import androidx.room.PrimaryKey
         onDelete = ForeignKey.CASCADE,
     )
     ],
-    indices = [Index("name", unique = true)]
+    indices = [
+        Index("name", unique = true),
+        Index("parentCompositeTaskId", unique = true)
+    ]
 )
 data class InFolderCompositeSubTaskEntity(
     @PrimaryKey(autoGenerate = true)

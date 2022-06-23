@@ -18,7 +18,8 @@ import spiral.bit.dev.gamificationnote.data.dto.task.TaskDifficult
     ],
     indices = [
         Index("name", unique = true),
-        Index("description", unique = true)
+        Index("description", unique = true),
+        Index("parentFolderId", unique = true)
     ]
 )
 data class InFolderCompositeTaskEntity(

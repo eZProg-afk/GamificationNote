@@ -19,7 +19,8 @@ import spiral.bit.dev.gamificationnote.data.dto.task.TaskDifficult
     ],
     indices = [
         Index("name", unique = true),
-        Index("description", unique = true)
+        Index("description", unique = true),
+        Index("parentFolderId", unique = true)
     ]
 )
 data class InFolderRepeatingTaskEntity(
@@ -31,5 +32,5 @@ data class InFolderRepeatingTaskEntity(
     val difficult: TaskDifficult = TaskDifficult.COMMON,
     @DrawableRes val iconResource: Int = R.drawable.ic_tasks,
     val autoCreationInterval: TaskAutoCreationInterval = TaskAutoCreationInterval.NOT_DEFINED,
-    val nextAutoCreationDateInMillisTask: Long? = null
+    val nextAutoCreationDateInMillisTask: Long = 0
 )

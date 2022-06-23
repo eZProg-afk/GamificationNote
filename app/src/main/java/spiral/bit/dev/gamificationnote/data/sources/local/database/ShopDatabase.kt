@@ -19,8 +19,12 @@ import spiral.bit.dev.gamificationnote.data.sources.local.entities.shop.hero.Wea
 
 @Database(
     entities = [
-        WeaponEntity::class, ArmorEntity::class, BackgroundEntity::class,
-        ThemeEntity::class, MusicEntity::class, EffectEntity::class,
+        WeaponEntity::class,
+        ArmorEntity::class,
+        BackgroundEntity::class,
+        ThemeEntity::class,
+        MusicEntity::class,
+        EffectEntity::class,
         AppFeatureEntity::class
     ], version = 1, exportSchema = false
 )

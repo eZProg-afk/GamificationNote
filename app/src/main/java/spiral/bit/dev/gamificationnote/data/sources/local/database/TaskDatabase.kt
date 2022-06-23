@@ -14,16 +14,19 @@ import spiral.bit.dev.gamificationnote.data.sources.local.entities.tasks.Composi
 import spiral.bit.dev.gamificationnote.data.sources.local.entities.tasks.CompositeTaskEntity
 import spiral.bit.dev.gamificationnote.data.sources.local.entities.tasks.RepeatingTaskEntity
 import spiral.bit.dev.gamificationnote.data.sources.local.entities.tasks.SimpleTaskEntity
-import spiral.bit.dev.gamificationnote.data.sources.local.entities.tasks.inFolder.InFolderCompositeSubTaskEntity
-import spiral.bit.dev.gamificationnote.data.sources.local.entities.tasks.inFolder.InFolderCompositeTaskEntity
-import spiral.bit.dev.gamificationnote.data.sources.local.entities.tasks.inFolder.InFolderRepeatingTaskEntity
-import spiral.bit.dev.gamificationnote.data.sources.local.entities.tasks.inFolder.InFolderSimpleTaskEntity
+import spiral.bit.dev.gamificationnote.data.sources.local.entities.tasks.inFolder.*
 
 @Database(
     entities = [
-        SimpleTaskEntity::class, RepeatingTaskEntity::class, CompositeTaskEntity::class,
-        CompositeSubTaskEntity::class, InFolderSimpleTaskEntity::class, InFolderRepeatingTaskEntity::class,
-        InFolderCompositeTaskEntity::class, InFolderCompositeSubTaskEntity::class,
+        SimpleTaskEntity::class,
+        RepeatingTaskEntity::class,
+        CompositeTaskEntity::class,
+        CompositeSubTaskEntity::class,
+        InFolderSimpleTaskEntity::class,
+        InFolderRepeatingTaskEntity::class,
+        InFolderCompositeTaskEntity::class,
+        InFolderCompositeSubTaskEntity::class,
+        FolderEntity::class
     ], version = 1, exportSchema = false
 )
 abstract class TaskDatabase : RoomDatabase() {
