@@ -2,10 +2,7 @@ package spiral.bit.dev.gamificationnote.data.sources.local.database
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
-import spiral.bit.dev.gamificationnote.data.sources.local.dao.tasks.CompositeSubTaskDao
-import spiral.bit.dev.gamificationnote.data.sources.local.dao.tasks.CompositeTaskDao
-import spiral.bit.dev.gamificationnote.data.sources.local.dao.tasks.RepeatingTaskDao
-import spiral.bit.dev.gamificationnote.data.sources.local.dao.tasks.SimpleTaskDao
+import spiral.bit.dev.gamificationnote.data.sources.local.dao.tasks.*
 import spiral.bit.dev.gamificationnote.data.sources.local.dao.tasks.inFolder.InFolderCompositeSubTaskDao
 import spiral.bit.dev.gamificationnote.data.sources.local.dao.tasks.inFolder.InFolderCompositeTaskDao
 import spiral.bit.dev.gamificationnote.data.sources.local.dao.tasks.inFolder.InFolderRepeatingTaskDao
@@ -35,6 +32,7 @@ abstract class TaskDatabase : RoomDatabase() {
     abstract fun compositeTaskDao(): CompositeTaskDao
     abstract fun compositeSubTaskDao(): CompositeSubTaskDao
 
+    abstract fun folderDao(): FolderDao
     abstract fun inFolderSimpleTaskDao(): InFolderSimpleTaskDao
     abstract fun inFolderRepeatingTaskDao(): InFolderRepeatingTaskDao
     abstract fun inFolderCompositeTaskDao(): InFolderCompositeTaskDao

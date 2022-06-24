@@ -4,6 +4,7 @@ import androidx.annotation.DrawableRes
 import androidx.room.Entity
 import androidx.room.Index
 import androidx.room.PrimaryKey
+import spiral.bit.dev.gamificationnote.R
 import spiral.bit.dev.gamificationnote.data.dto.item.ItemRarity
 
 @Entity(tableName = "weapons", indices = [
@@ -18,7 +19,7 @@ data class WeaponEntity(
     val name: String,
     val description: String,
     val rarityValue: String = ItemRarity.COMMON.value,
-    @DrawableRes val imageResource: Int,
+    @DrawableRes val imageResource: Int = R.drawable.empty_placeholder,
     val priceInMoney: Int,
     val priceInCrystals: Int,
     val attackPoints: Int = 0

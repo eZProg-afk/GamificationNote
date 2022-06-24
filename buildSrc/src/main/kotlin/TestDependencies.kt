@@ -64,6 +64,7 @@ fun DependencyHandler.addIntegrationTests() {
     androidTestImplementation(TestDependencies.junitExt)
     androidTestImplementation(TestDependencies.arch)
     androidTestImplementation(TestDependencies.truth)
+    androidTestImplementation(TestDependencies.turbine)
     androidTestImplementation(TestDependencies.navigation)
 }
 

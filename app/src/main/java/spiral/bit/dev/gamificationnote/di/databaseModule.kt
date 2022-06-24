@@ -68,6 +68,10 @@ fun DI.Builder.bindShopDao() {
 }
 
 fun DI.Builder.bindInFolderTasksDao() {
+    bindMultiton(tag = "folder_dao") { taskDatabase: TaskDatabase ->
+        taskDatabase.folderDao()
+    }
+
     bindMultiton(tag = "in_folder_simple_tasks_dao") { taskDatabase: TaskDatabase ->
         taskDatabase.inFolderSimpleTaskDao()
     }
